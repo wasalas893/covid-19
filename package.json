@@ -1,0 +1,32 @@
+{
+  "name": "covid-19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server ",
+    "client":"npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasalas893/covid-19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasalas893/covid-19/issues"
+  },
+  "homepage": "https://github.com/wasalas893/covid-19#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.3"
+  }
+}
